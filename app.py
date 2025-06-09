@@ -12,7 +12,7 @@ import json
 # The uvicorn library is used to run the API.
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
-import specifications as specs
+
 
 # Create an instance of the FastAPI class.
 app = FastAPI()
@@ -155,13 +155,3 @@ def return_ip_information():
             'type': ip_type,
             'version': version
         }
-
-if __name__ == "__main__":
-
-    # Run the app.
-    uvicorn.run(
-        # Specify the app as the FastAPI app.
-        'app:app',
-        host='127.0.0.1',
-        port=8000
-    )
